@@ -24,7 +24,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   return (
-    <div className="w-full flex justify-between items-center py-3 px-6 bg-primary">
+    <div className="w-full flex justify-between items-center py-3 px-6 bg-primary ">
       {/* logo */}{" "}
       <Link to="/">
         <div className=" text-red-600 text-2xl font-bold cursor-pointer">

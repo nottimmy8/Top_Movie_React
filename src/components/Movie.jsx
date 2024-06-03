@@ -10,7 +10,7 @@ const Movie = ({ item }) => {
   const [saved, setSaved] = useState(false);
   const { user } = UserAuth();
 
-  const movieID = doc(db, "user", `${user?.email}`);
+  const movieID = doc(db, "users", `${user?.email}`);
 
   const saveShow = async () => {
     if (user?.email) {
@@ -19,7 +19,7 @@ const Movie = ({ item }) => {
       await updateDoc(movieID, {
         savedShows: arrayUnion({
           id: item.id,
-          title: item.title,
+          title: item.name,
           img: item.backdrop_path,
         }),
       });

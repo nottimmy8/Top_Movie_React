@@ -26,7 +26,14 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="/player/:id" element={<Player />} />
+          <Route
+            path="/player/:id"
+            element={
+              <ProtectedRoute>
+                <Player />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </AuthContextProvider>
     </div>
