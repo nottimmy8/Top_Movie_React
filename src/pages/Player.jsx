@@ -77,10 +77,7 @@ const Player = () => {
   return (
     <>
       {loading ? (
-        <div>
-          {/* <h1>Loading...</h1> */}
-          <BallTriangle />
-        </div>
+        <BallTriangle />
       ) : (
         <div className=" w-full p-8 h-auto">
           <div className=" w-full h-[30rem]  ">
