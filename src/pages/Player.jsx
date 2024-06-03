@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { BallTriangle } from "react-loader-spinner";
+
 import { useParams } from "react-router-dom";
 
 const Player = () => {
@@ -57,18 +57,6 @@ const Player = () => {
       setLoading(false);
     }
   };
-  render(
-    <BallTriangle
-      height={100}
-      width={100}
-      radius={5}
-      color="#4fa94d"
-      ariaLabel="ball-triangle-loading"
-      wrapperStyle={{}}
-      wrapperClass=""
-      visible={true}
-    />
-  );
 
   useEffect(() => {
     fetchMovieVideos();
@@ -77,7 +65,7 @@ const Player = () => {
   return (
     <>
       {loading ? (
-        <BallTriangle />
+        <div>Loading...</div>
       ) : (
         <div className=" w-full p-8 h-auto">
           <div className=" w-full h-[30rem]  ">
